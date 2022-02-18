@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validator</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="signup-form">SIGN IN</h1>
+        <!--Form Container-->
+        <form id="forms">
+            <!--Full Name-->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter Your Name" name="name" required minlength="6" maxlength="50">
+            </div>
+            <!--Number-->
+            <div class="form-group">
+                <label for="number">Phone Number</label>
+                <input type="tel" id="number" placeholder="080-0000-0000" name="phone" required >
+            </div>
+            <!--Email Address-->
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter Your Email" name="email" required>
+            </div>
+            <!--Website-->
+            <div class="form-group">
+                <label for="website">Website Url</label>
+                <input type="url" id="website" placeholder="Enter Your website" name="website" required>
+            </div>
+            <!--Passwords-->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password1" placeholder="*********" name="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number.">
+            </div>
+            <!--Confirm Password-->
+            <div class="form-group">
+                <label for="password">Confirm Password</label>
+                <input type="password" id="password2" placeholder="Confirm Your password" required>
+            </div>
+            <!--Buttons-->
+            <button id="submit-btn" type="submit">Register</button>
+        </form>
+        <div class="message">
+            <h3 id="success-statement">Complete Your Details</h3>
+        </div>
+    </div>
+    
+    <script src="form.js"></script>
+</body>
+</html>
